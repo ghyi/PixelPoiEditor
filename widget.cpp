@@ -8,7 +8,8 @@ Widget::Widget(QWidget *parent) :
     ui->setupUi(this);
 
 	this->setMapping();
-	this->addImage("test.jpg");
+	this->addImage("archlinux.png");
+	this->addImage("ubuntu.png");
 	this->save("out");
 }
 
