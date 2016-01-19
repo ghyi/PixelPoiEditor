@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QImage>
 #include <cstdio>
+#include <cstring>
 #include <vector>
 #include "Mode.hpp"
 #include "Count.hpp"
@@ -22,6 +23,7 @@ public:
     ~Widget();
 
 	void addImage(const char *filename);
+	void setMapping(void);
 	void save(const char *filename);
 
 private slots:
@@ -34,6 +36,7 @@ private:
 	Count imageCount, lineCount, brakeCount;
 	std::vector<uint16_t> imageAddress, lineAddress, brakeAddress;
 	std::vector<QImage> images;
+	uint8_t mapping[32];
 };
 
 #endif // WIDGET_H
