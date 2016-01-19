@@ -5,7 +5,7 @@
 
 class Mode {
 	public:
-		uint8_t imageIndexAddresss;
+		uint8_t imageIndexAddress;
 		uint8_t lineIndexAddress;
 		uint8_t brakeIndexAddress;
 };

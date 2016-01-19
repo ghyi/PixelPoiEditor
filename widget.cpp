@@ -26,8 +26,8 @@ void Widget::addImage(const char *filename) {
 }
 
 void Widget::save(const char *filename) {
-	mode.imageIndexAddresss = sizeof(Mode);
-	mode.lineIndexAddress = mode.imageIndexAddresss + sizeof(Count) + imageCount.count * sizeof(uint16_t);
+	mode.imageIndexAddress = sizeof(Mode);
+	mode.lineIndexAddress = mode.imageIndexAddress + sizeof(Count) + imageCount.count * sizeof(uint16_t);
 	mode.brakeIndexAddress = mode.lineIndexAddress + sizeof(Count) + lineCount.count * sizeof(uint16_t);
 
 	imageAddress.push_back(mode.brakeIndexAddress + sizeof(Count) + brakeCount.count * sizeof(uint16_t));
