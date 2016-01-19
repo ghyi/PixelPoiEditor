@@ -7,7 +7,7 @@ Widget::Widget(QWidget *parent) :
 {
     ui->setupUi(this);
 
-	this->addImage("input.bmp");
+	this->addImage("test.jpg");
 	this->save("rrr");
 }
 
@@ -73,7 +73,6 @@ void Widget::save(const char *filename) {
 		Image img;
 		img.width = images.at(i).width();
 		fwrite(&img, sizeof(Image), 1, file);
-		printf("w%d h%d\n", img.width, img.height);
 		fwrite(images.at(i).bits(), sizeof(uint8_t), img.height * img.width * 3, file);
 	}
 
